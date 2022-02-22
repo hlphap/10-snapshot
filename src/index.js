@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import GlobalStyles from './components/GlobalStyles/GlobalStyles';
+import PhotoContextProvider from './context/PhotoContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlobalStyles>
+      <PhotoContextProvider>
+        <App />
+      </PhotoContextProvider>
+    </GlobalStyles>
   </React.StrictMode>,
   document.getElementById('root')
 );
