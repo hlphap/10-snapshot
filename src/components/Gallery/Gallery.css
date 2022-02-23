@@ -1,7 +1,6 @@
 .gallery {
     display: flex;
     margin: 0 auto;
-    width: fit-content;
 }
 
 .gallery__img {

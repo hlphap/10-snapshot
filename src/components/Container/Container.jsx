@@ -12,7 +12,7 @@ function Container({ search }) {
     }, [search]);
 
     return (
-        <div class="container">
+        <div className="container">
             <h2 className="container__title">{search} Picture</h2>
             <Gallery data={images} />
         </div>

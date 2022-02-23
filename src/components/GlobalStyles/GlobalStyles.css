@@ -49,6 +49,10 @@ code {
     padding: 0 6px;
 }
 
+.grid__col-2 {
+    width: calc(100% / 6);
+}
+
 .text--center {
     text-align: center;
 }
