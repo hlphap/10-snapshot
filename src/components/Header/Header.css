@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__heading {
+    color: #051c33;
+    font-size: 6.4rem;
+    margin-top: 36px;
+    font-family: "Lobster", cursive;
+}

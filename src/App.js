@@ -2,17 +2,13 @@ import "./App.css";
 import Header from "./components/Header/Header";
 
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
-import Item from "./components/Container/Container";
+import Container from "./components/Container/Container";
 
 function App() {
     return (
         <HashRouter>
-            <div className="container">
-                <Route
-                    render={(props) => {
-                        return <Header />;
-                    }}
-                />
+            <div className="app">
+                <Header />
                 <Switch>
                     <Route
                         exact
@@ -21,14 +17,30 @@ function App() {
                     />
                     <Route
                         path="/mountain"
-                        render={() => <Item search="mountain" />}
+                        render={() => <Container search="mountain" />}
                     />
                     <Route
                         path="/beach"
-                        render={() => <Item search="beach" />}
+                        render={() => <Container search="beach" />}
                     />
-                    <Route path="/bird" render={() => <Item search="bird" />} />
-                    <Route path="/food" render={() => <Item search="food" />} />
+                    <Route
+                        path="/bird"
+                        render={() => <Container search="bird" />}
+                    />
+                    <Route
+                        path="/food"
+                        render={() => <Container search="food" />}
+                    />
+                    <Route
+                        path="/search/:searchID"
+                        render={(props) => {
+                            return (
+                                <Container
+                                    search={props.match.params.searchID}
+                                />
+                            );
+                        }}
+                    />
                 </Switch>
             </div>
         </HashRouter>

@@ -1,0 +1,30 @@
+.form {
+    margin-top: 24px;
+}
+
+.form__input {
+    color: #000;
+    padding: 8px;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    border: 3px solid #d7dbdf;
+    border-right: none;
+    min-width: 400px;
+    font-size: 1.4rem;
+}
+
+.form__btn-submit {
+    font-size: 1.4rem;
+    padding: 11px;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #051c33;
+    cursor: pointer;
+}
+
+.form__btn-submit[disabled] {
+    color: #000;
+    background-color: rgba(204, 207, 205, 0.493);
+}

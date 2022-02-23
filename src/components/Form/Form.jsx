@@ -1,14 +1,41 @@
-import { PhotoContext } from "../../context/PhotoContext";
+import "./Form.css";
 
-import { useContext } from "react";
+import { PhotoContext } from "../../context/PhotoContext";
+import { useHistory } from "react-router-dom";
+import { useContext, useState } from "react";
 
 function Form() {
-    const { images, loading, runSearch } = useContext(PhotoContext);
+    const { runSearch } = useContext(PhotoContext);
+    const [search, setSearch] = useState("");
+
+    const handleOnChange = (e) => {
+        setSearch(e.target.value);
+    };
+
+    let history = useHistory();
 
     return (
-        <form action="">
-            <input type="text" placeholder="Search" />
-            <button type="submit" onClick={runSearch}>
+        <form
+            className="form"
+            action=""
+            onSubmit={(e) => {
+                e.preventDefault();
+                history.push(`/search/${search}`);
+                runSearch(search);
+            }}
+        >
+            <input
+                className="form__input"
+                type="text"
+                placeholder="Search..."
+                value={search}
+                onChange={handleOnChange}
+            />
+            <button
+                className="form__btn-submit"
+                type="submit"
+                disabled={!search}
+            >
                 Search
             </button>
         </form>

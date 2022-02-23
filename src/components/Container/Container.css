@@ -1,0 +1,10 @@
+.container {
+    margin-top: 24px;
+}
+
+.container__title {
+    text-align: center;
+    color: #051c33;
+    font-size: 3.2rem;
+    text-transform: capitalize;
+}

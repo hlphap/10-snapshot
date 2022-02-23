@@ -1,9 +1,10 @@
+import "./Container.css";
 import { useContext, useEffect } from "react";
 import { PhotoContext } from "../../context/PhotoContext";
 import Gallery from "./../Gallery/Gallery";
 
 function Container({ search }) {
-    const { images, loading, runSearch } = useContext(PhotoContext);
+    const { images, runSearch } = useContext(PhotoContext);
 
     useEffect(() => {
         runSearch(search);
@@ -11,8 +12,8 @@ function Container({ search }) {
     }, [search]);
 
     return (
-        <div>
-            <h2>{search} Picture</h2>
+        <div class="container">
+            <h2 className="container__title">{search} Picture</h2>
             <Gallery data={images} />
         </div>
     );

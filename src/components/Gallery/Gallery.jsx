@@ -1,3 +1,4 @@
+import "./Gallery.css";
 import { useEffect, useState } from "react";
 
 function Gallery({ data }) {
@@ -12,10 +13,19 @@ function Gallery({ data }) {
         setImages(newData);
     }, [data]);
     return (
-        <div>
-            {images.map((image) => (
-                <img key={image.id} src={image.url} alt={image.title} />
-            ))}
+        <div className="gallery">
+            <div className="grid">
+                <div className="grid__row">
+                    {images.map((image) => (
+                        <img
+                            className="gallery__img grid__col-2"
+                            key={image.id}
+                            src={image.url}
+                            alt={image.title}
+                        />
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }

@@ -2,12 +2,19 @@
     display: flex;
     align-items: center;
     list-style: none;
-    margin: 0 -4px;
+    margin-top: 24px;
 }
 
 .navigation__item {
-    padding: 4px 8px;
-    background-color: #ccc;
-    margin: 4px;
+    padding: 8px 12px;
+    background-color: #051c33;
+    margin: 8px;
     cursor: pointer;
+    border-radius: 2px;
+}
+
+.navigation__item-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
 }

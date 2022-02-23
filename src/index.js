@@ -1,20 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import GlobalStyles from './components/GlobalStyles/GlobalStyles';
-import PhotoContextProvider from './context/PhotoContext';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import GlobalStyles from "./components/GlobalStyles/GlobalStyles";
+import PhotoContextProvider from "./context/PhotoContext";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <GlobalStyles>
-      <PhotoContextProvider>
-        <App />
-      </PhotoContextProvider>
-    </GlobalStyles>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <GlobalStyles>
+            <PhotoContextProvider>
+                <App />
+            </PhotoContextProvider>
+        </GlobalStyles>
+    </React.StrictMode>,
+    document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
